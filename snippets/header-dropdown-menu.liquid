@@ -23,7 +23,8 @@
                 >
                   {{- link.title | escape -}}
                 </span>
-                {{- 'icon-caret.svg' | inline_asset_content -}}
+                {% render 'menu-dopdown-plus' %}
+                {% comment %} {{- 'icon-caret.svg' | inline_asset_content -}} {% endcomment %}
               </summary>
               <ul
                 id="HeaderMenu-MenuList-{{ forloop.index }}"

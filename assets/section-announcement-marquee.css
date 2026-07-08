@@ -1,0 +1,39 @@
+.announcement-marquee {
+    background: var(--announcement-bg);
+    overflow: hidden;
+    padding-top: var(--announcement-padding-top);
+    padding-bottom: var(--announcement-padding-bottom);
+}
+
+.announcement-marquee__track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: var(--announcement-gap);
+    animation: announcement-marquee-scroll 22s linear infinite;
+}
+
+.announcement-marquee__item {
+    flex: 0 0 auto;
+    color: var(--announcement-text);
+    font-weight: 500;
+    font-size: var(--announcement-font-size);
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+@keyframes announcement-marquee-scroll {
+    from {
+
+        transform: translateX(0);
+
+    }
+    to {
+
+        transform: translateX(-50%);
+
+    }
+}

@@ -1,0 +1,122 @@
+{{ 'section-announcement-marquee.css' | asset_url | stylesheet_tag }}
+
+<section
+  class="announcement-marquee"
+  style="
+    --announcement-bg: {{ section.settings.background_color }};
+    --announcement-text: {{ section.settings.text_color }};
+    --announcement-font-size: {{ section.settings.font_size }}px;
+    --announcement-padding-top: {{ section.settings.padding_top }}px;
+    --announcement-padding-bottom: {{ section.settings.padding_bottom }}px;
+    --announcement-gap: {{ section.settings.item_gap }}px;
+  "
+>
+
+  <div class="announcement-marquee__track">
+
+    {% for i in (1..2) %}
+      {% for block in section.blocks %}
+
+        <div
+          class="announcement-marquee__item"
+          {{ block.shopify_attributes }}
+        >
+          {{ block.settings.text }}
+        </div>
+
+      {% endfor %}
+    {% endfor %}
+
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Announcement Marquee",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#203451"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font Size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top Padding",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom Padding",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "item_gap",
+      "label": "Gap Between Items",
+      "min": 50,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "default": 205
+    }
+  ],
+
+  "blocks": [
+
+    {
+      "type": "announcement",
+      "name": "Announcement",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Announcement Text",
+          "default": "CLINICALLY DESIGNED WELLNESS SYSTEMS — LIMITED SUPPLY"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement Marquee",
+      "blocks": [
+        {
+          "type": "announcement"
+        },
+
+        {
+          "type": "announcement"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -260,7 +260,10 @@
               {%- if customer and customer.has_avatar? -%}
                 {{ customer | avatar }}
               {%- else -%}
-                <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
+                <span class="svg-wrapper">
+                  {% comment %} {{ 'icon-account.svg' | inline_asset_content }} {% endcomment %}
+                   {% render 'account-icon' %}
+                </span>
               {%- endif -%}
             </account-icon>
           {%- else -%}
@@ -287,9 +290,15 @@
 
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         {% if cart == empty %}
-          <span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span>
+          <span class="svg-wrapper">
+            {% comment %} {{ 'icon-cart-empty.svg' | inline_asset_content }} {% endcomment %}
+             {% render 'cart-svg' %}
+          </span>
         {% else %}
-          <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>
+          <span class="svg-wrapper">
+            {% comment %} {{ 'icon-cart.svg' | inline_asset_content }} {% endcomment %}
+             {% render 'cart-svg' %}
+          </span>
         {% endif %}
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}
@@ -301,6 +310,30 @@
           </div>
         {%- endif -%}
       </a>
+
+      {% if section.settings.enable_button %}
+        {% style %}
+          .header-button {
+              display: flex;
+          }
+          
+          .header-button a {
+              padding: 14px 25px;
+              border-radius: 30px;
+              background: {{ section.settings.button_bg }};
+              color: {{ section.settings.button_color }};
+              font-family: General Sans Variable;
+              font-weight: 600;
+              font-size: {{ section.settings.button_font_size }}px;
+              line-height: normal;
+              letter-spacing: 0%;
+              text-decoration: none;
+          }
+        {% endstyle %}
+        <div class="header-button">
+          <a href="{{ section.settings.button_url }}">{{ section.settings.button }}</a>
+        </div>
+      {% endif %}  
     </div>
   </header>
 </{{ header_tag }}>
@@ -609,6 +642,43 @@
       "default": true,
       "label": "t:sections.header.settings.enable_customer_avatar.label",
       "info": "t:sections.header.settings.enable_customer_avatar.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_button",
+      "label": "Enable Button"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Url"
+    },
+    {
+      "type": "text",
+      "id": "button",
+      "label": "Button Text"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Background",
+      "default": "#182941"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "label": "Font Size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
     },
     {
       "type": "header",
