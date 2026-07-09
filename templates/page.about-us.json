@@ -1,14 +1,258 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "page_hero_rbjkhC": {
+      "type": "page-hero",
+      "name": "Page Hero",
+      "settings": {
+        "background_color": "#182941",
+        "border_radius": 24,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "image_position": "right",
+        "content_width": 830,
+        "image_width": 350,
+        "breadcrumb": "Home / About",
+        "breadcrumb_color": "#ffffff",
+        "breadcrumb_size": 16,
+        "heading": "About Stengler",
+        "heading_color": "#ffffff",
+        "heading_size": 54,
+        "description": "<p>Doctor-formulated solutions based on decades of clinical experience and modern research.</p>",
+        "description_color": "#ffffff",
+        "description_size": 16,
+        "image": "shopify://shop_images/Group_43.jpg"
+      }
+    },
+    "message_from_founders_qpEBAp": {
+      "type": "message-from-founders",
+      "name": "Message From Founders",
+      "settings": {
+        "background_color": "#e1eaf7",
+        "border_radius": 24,
+        "padding_top": 52,
+        "padding_bottom": 0,
+        "left_width": 410,
+        "right_width": 850,
+        "column_gap": 46,
+        "avatar_size": 55,
+        "title": "A message from Dr. Mark and Angela Stengler",
+        "title_color": "#182941",
+        "title_size": 44,
+        "description": "<p>We are passionate about nutritional and holistic healthcare! This passion started long before our many years of medical training. Helping people achieve optimal wellness is our goal for patients and the public who follow our advice regarding holistic health. As Naturopathic Medical Doctors, we have training in both conventional and nutritional/holistic therapies. Unlike many doctors, we value non-toxic, natural therapies as the primary focus of our treatments. Our training and nearly three decades of working with patients provide us with the knowledge to provide information and products that have the potential to greatly enhance people’s wellness.<br/><br/>We provide the best science in nutritional products in two ways. First, we are always studying and keeping up with the latest research in nutrition and integrative medicine. You may be familiar with our more than twenty books on holistic health. Our products are based on high-quality science. In addition, we see patients throughout the week with a variety of conditions. We see how our nutritional products work for patients and make a significant difference in their health.<br/><br/>All our best to you and your loved ones in your quest for optimal health!<br/><br/></p>",
+        "text_color": "#182941",
+        "text_size": 16,
+        "avatar_1": "shopify://shop_images/Ellipse_2.png",
+        "avatar_2": "shopify://shop_images/Ellipse_3.png",
+        "avatar_3": "shopify://shop_images/Ellipse_3.png"
+      }
+    },
+    "section_content_media_hyBHzd": {
+      "type": "section-content-media",
+      "name": "Content Media",
+      "settings": {
+        "background_color": "#f3f3f3",
+        "border_radius": 24,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "image_position": "left",
+        "image_width": 820,
+        "text_width": 410,
+        "column_gap": 80,
+        "image_radius": 20,
+        "heading": "Our Mission",
+        "heading_color": "#182941",
+        "heading_size": 44,
+        "description": "<p>Our mission is to deliver doctor formulated, science-based supplements grounded in integrative medical training and time-tested natural therapies. We not only research these products and bring them to market but also prove their efficacy with patients. Our goal is to make the highest quality and potent supplements that we use with our patients available to the public.<br/><br/></p>",
+        "description_color": "#182941",
+        "description_size": 16,
+        "image": "shopify://shop_images/image_10.jpg"
+      }
+    },
+    "section_content_media_AJDB8a": {
+      "type": "section-content-media",
+      "name": "Content Media",
+      "settings": {
+        "background_color": "#f7e9d0",
+        "border_radius": 24,
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "image_position": "right",
+        "image_width": 820,
+        "text_width": 410,
+        "column_gap": 80,
+        "image_radius": 20,
+        "heading": "Our Vision",
+        "heading_color": "#182941",
+        "heading_size": 44,
+        "description": "<p>Our vision is to help people with doctor formulated supplements that address root causes of help by working with the designed system of the human body. By focusing on integrity, research, and clinical insight, we strive to be a trusted leader in high performance nutritional supplements. Ultimately, our goal is to help people with their health through excellence in nutritional therapies.</p>",
+        "description_color": "#182941",
+        "description_size": 16,
+        "image": "shopify://shop_images/image_10.jpg"
+      }
+    },
+    "video_MrGj8L": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "cover_image": "shopify://shop_images/Rectangle_2621.jpg",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_experts_showcase_TUiXMP": {
+      "type": "section-experts-showcase",
+      "blocks": {
+        "expert_card_WDHPgx": {
+          "type": "expert_card",
+          "settings": {
+            "image": "shopify://shop_images/image_16.jpg",
+            "name": "Dr Mark Stengler",
+            "subtitle": "Author/coauthor of books on holistic healthcare",
+            "content_title": "2025 Top Holistic Doctor of the Year",
+            "content": "<p>Dr. Stengler holds a Doctorate of Naturopathic Medicine, a Doctor of Health Sciences (DHSc), and a Master of Science in Human Biology. His additional academic credentials include a Master of Religious Studies, a Bachelor of Arts in Liberal Arts, a certificate in Advanced Metabolic Endocrinology from The Metabolic Medical Institute, and coursework in Logic and Reasoning from Oxford University.<br/></p><ul><li>2021 Doctor of the Decade by the International Association of Top Professionals.</li><li>Private practice at the Stengler Center For Integrative Medicine in Encinitas, California.<br/>2021 Doctor of the Decade by the International Association of Top Professionals.</li><li>Private practice at the Stengler Center For Integrative Medicine in Encinitas, California.</li></ul>"
+          }
+        },
+        "profile_card_KnM3wr": {
+          "type": "profile_card",
+          "settings": {
+            "image": "shopify://shop_images/image_16_1.jpg",
+            "name": "Dr Angela Stengler",
+            "subtitle": "Author/coauthor of books on holistic healthcare"
+          }
+        }
+      },
+      "block_order": [
+        "expert_card_WDHPgx",
+        "profile_card_KnM3wr"
+      ],
+      "name": "Experts Showcase",
+      "settings": {
+        "background_color": "#d3ece3",
+        "border_radius": 24,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "heading": "Get to know your doctors",
+        "heading_color": "#182941",
+        "heading_size": 44,
+        "description": "<p>Comprehensive protocols used in our clinic to address root causes & restore balance</p>",
+        "text_color": "#182941",
+        "text_size": 16,
+        "card_background": "#ffffff",
+        "card_radius": 16,
+        "image_radius": 12
+      }
+    },
+    "reviews_slider_meE7QV": {
+      "type": "reviews-slider",
+      "blocks": {
+        "review_RdVd9J": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_date": "24-Sep-2025",
+            "review": "<p>I've been using this wellness product daily, and I already feel more energetic and refreshed. It fits perfectly into my routine.</p>",
+            "author": "Sara Wellness"
+          }
+        },
+        "review_YF9kXA": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_date": "24-Sep-2025",
+            "review": "<p>I've been using this wellness product daily, and I already feel more energetic and refreshed. It fits perfectly into my routine.</p>",
+            "author": "Sara Wellness"
+          }
+        },
+        "review_UVUwjg": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_date": "24-Sep-2025",
+            "review": "<p>I've been using this wellness product daily, and I already feel more energetic and refreshed. It fits perfectly into my routine.</p>",
+            "author": "Sara Wellness"
+          }
+        },
+        "review_bzNmYx": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_date": "24-Sep-2025",
+            "review": "<p>I've been using this wellness product daily, and I already feel more energetic and refreshed. It fits perfectly into my routine.</p>",
+            "author": "Sara Wellness"
+          }
+        },
+        "review_nk4Y8k": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_date": "24-Sep-2025",
+            "review": "<p>I've been using this wellness product daily, and I already feel more energetic and refreshed. It fits perfectly into my routine.</p>",
+            "author": "Sara Wellness"
+          }
+        }
+      },
+      "block_order": [
+        "review_RdVd9J",
+        "review_YF9kXA",
+        "review_UVUwjg",
+        "review_bzNmYx",
+        "review_nk4Y8k"
+      ],
+      "name": "Reviews Slider",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 50,
+        "heading": "Trusted By 100+ People",
+        "heading_color": "#182941",
+        "heading_size": 44,
+        "description": "<p>These are the same formulas used in our clinic to support real patients.</p>",
+        "text_color": "#182941",
+        "text_size": 20,
+        "card_background": "#182941",
+        "card_text_color": "#f3f3f3",
+        "card_radius": 24,
+        "date_size": 14,
+        "review_size": 16,
+        "author_size": 16,
+        "desktop_slides": 4,
+        "tablet_slides": 2,
+        "mobile_slides": 1,
+        "space_between": 12
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "page_hero_rbjkhC",
+    "message_from_founders_qpEBAp",
+    "section_content_media_hyBHzd",
+    "section_content_media_AJDB8a",
+    "video_MrGj8L",
+    "section_experts_showcase_TUiXMP",
+    "reviews_slider_meE7QV"
   ]
 }

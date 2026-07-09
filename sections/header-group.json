@@ -91,6 +91,9 @@
         "enable_button": true,
         "button_url": "#",
         "button": "Find Your Plan",
+        "button_bg": "#182941",
+        "button_color": "#ffffff",
+        "button_font_size": 16,
         "margin_bottom": 0,
         "padding_top": 20,
         "padding_bottom": 20

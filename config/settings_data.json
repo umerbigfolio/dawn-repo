@@ -107,8 +107,9 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
-    "brand_description": "<p></p>",
-    "brand_image_width": 100,
+    "brand_description": "<p>As Naturopathic Medical Doctors, we have training in both conventional and nutritional/holistic therapies. Unlike many doctors, we value non-toxic, natural therapies as the primary focus of our treatments.</p>",
+    "brand_image": "shopify://shop_images/image_3.png",
+    "brand_image_width": 80,
     "social_facebook_link": "",
     "social_instagram_link": "",
     "social_youtube_link": "",
@@ -156,9 +157,9 @@
       },
       "scheme-2": {
         "settings": {
-          "background": "#f3f3f3",
+          "background": "#182941",
           "background_gradient": "",
-          "text": "#121212",
+          "text": "#FFFFFF",
           "button": "#121212",
           "button_label": "#f3f3f3",
           "secondary_button_label": "#121212",
