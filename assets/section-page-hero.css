@@ -35,7 +35,8 @@
   width: 100%;
 }
 
-.page-hero__breadcrumb {
+.page-hero__breadcrumb,
+.breadcrumbs__link {
   padding-bottom: 20px;
   color: var(--page-hero-breadcrumb-color);
   font-family: "General Sans Variable", sans-serif;
@@ -43,6 +44,10 @@
   font-size: var(--page-hero-breadcrumb-size);
   line-height: 32px;
   letter-spacing: 0.02em;
+}
+
+.breadcrumbs__link {
+  padding-bottom: 0;
 }
 
 .page-hero__heading {

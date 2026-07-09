@@ -86,6 +86,208 @@
                     <div class="footer-block__details-content rte">
                       {{ block.settings.subtext }}
                     </div>
+                  {% when 'newsletter' %}
+                    {% style %}
+                      .footer-newsletter {
+                          max-width: 290px;
+                      }
+
+                      .footer-newsletter__heading {
+                          margin: 0;
+                          padding-bottom: 20px;
+                          color: #ffffff;
+                          font-family: "General Sans Variable", sans-serif;
+                          font-weight: 500;
+                          font-size: 24px;
+                          line-height: 100%;
+                      }
+
+                      .footer-newsletter__description {
+                          margin-bottom: 20px;
+                          color: #FFFFFF;
+                          font-family: "General Sans Variable", sans-serif;
+                          font-weight: 500;
+                          font-size: 16px;
+                          line-height: 24px;
+                      }
+
+                      .footer-newsletter__label {
+                          display: inline-block;
+                          margin-bottom: 10px;
+                          color: #ffffff;
+                          font-family: "General Sans Variable", sans-serif;
+                          font-weight: 500;
+                          font-size: 14px;
+                          line-height: 100%;
+                      }
+
+                      .footer-newsletter__form {
+                          position: relative;
+                      }
+
+                      .footer-newsletter__input {
+                          width: 100%;
+                          height: 50px;
+                          padding: 0 56px 0 18px;
+                          border: 2px solid #F2A7A0;
+                          border-radius: 999px;
+                          background: #ffffff;
+                          color: #182941;
+                          font-family: "General Sans Variable", sans-serif;
+                          font-size: 14px;
+                          outline: none;
+                          transition: .3s ease;
+                      }
+
+                      .footer-newsletter__input::placeholder {
+                          color: #8E95A3;
+                      }
+
+                      .footer-newsletter__input:focus {
+                          border-color: #ffffff;
+                      }
+
+                      .footer-newsletter__button {
+                          position: absolute;
+                          top: 50%;
+                          right: 4px;
+                          transform: translateY(-50%);
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          width: 42px;
+                          height: 42px;
+                          border: 0;
+                          border-radius: 50%;
+                          background: #A4A9B3;
+                          color: #ffffff;
+                          cursor: pointer;
+                          transition: .3s ease;
+                      }
+
+                      .footer-newsletter__button:hover {
+                          background: #182941;
+                      }
+
+                      .footer-newsletter__icon {
+                          width: 18px;
+                          height: 18px;
+                      }
+
+                      .footer-newsletter__error {
+                          margin-top: 8px;
+                          color: #FF7E7E;
+                          font-family: "General Sans Variable", sans-serif;
+                          font-size: 12px;
+                          line-height: 18px;
+                      }
+
+                      .footer-newsletter__social {
+                          display: flex;
+                          align-items: center;
+                          gap: 16px;
+                          margin-top: 20px;
+                      }
+
+                      .footer-newsletter__social-link {
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          width: 24px;
+                          height: 24px;
+                          color: #ffffff;
+                          text-decoration: none;
+                          transition: opacity .3s ease;
+                      }
+
+                      .footer-newsletter__social-link:hover {
+                          opacity: .7;
+                      }
+
+                      .footer-newsletter__field {
+                          position: relative;
+                      }
+                    {% endstyle %}
+                    <div class="footer-block__details-content">
+                      <div class="footer-newsletter">
+                        <div class="footer-newsletter__header">
+                            <h3 class="footer-newsletter__heading">
+                                {{ block.settings.title }}
+                            </h3>
+                            <div class="footer-newsletter__description">
+                                {{ block.settings.subtitle }}
+                            </div>
+                        </div>
+                        <div class="footer-newsletter__form-wrapper">
+                             {%- form 'customer', id: 'ContactFooter', class: 'footer-newsletter__form' -%}
+                              <input type="hidden" name="contact[tags]" value="newsletter">
+                              <div class="footer-newsletter__field-wrapper">
+                                <label
+                                  class="footer-newsletter__label"
+                                  for="NewsletterForm--{{ section.id }}"
+                                >
+                                  Email Address
+                                </label>
+                                <div class="footer-newsletter__field">
+                                  <input
+                                    id="NewsletterForm--{{ section.id }}"
+                                    type="email"
+                                    name="contact[email]"
+                                    class="footer-newsletter__input"
+                                    value="{{ form.email }}"
+                                    autocorrect="off"
+                                    autocapitalize="off"
+                                    autocomplete="email"
+                                    aria-required="true"
+                                    placeholder="Enter your email address"
+                                    required
+                                    {% if form.errors %}
+                                      autofocus
+                                      aria-invalid="true"
+                                      aria-describedby="ContactFooter-error"
+                                    {% elsif form.posted_successfully? %}
+                                      aria-describedby="ContactFooter-success"
+                                    {% endif %}
+                                  >
+                                  <button
+                                    type="submit"
+                                    class="footer-newsletter__button"
+                                    name="commit"
+                                    aria-label="{{ 'newsletter.button_label' | t }}"
+                                  >
+                                    <span class="footer-newsletter__button-icon">
+                                      {{ 'icon-arrow.svg' | inline_asset_content }}
+                                    </span>
+                                  </button>
+                                </div>
+                                {% if form.errors %}
+                                  <small
+                                    id="ContactFooter-error"
+                                    class="footer-newsletter__error"
+                                  >
+                                    {{ form.errors.translated_fields.email | capitalize }}
+                                    {{ form.errors.messages.email }}
+                                  </small>
+                                {% endif %}
+                                {% if form.posted_successfully? %}
+                                  <div
+                                    id="ContactFooter-success"
+                                    class="footer-newsletter__success"
+                                    tabindex="-1"
+                                  >
+                                    {{ 'newsletter.success' | t }}
+                                  </div>
+                                {% endif %}
+                              </div>
+                            {%- endform -%}
+                        </div>
+                        <div class="footer-newsletter__social">
+                            {%- if section.settings.show_social and has_social_icons -%}
+                              {%- render 'social-icons', class: 'footer__list-social' -%}
+                            {%- endif -%}
+                        </div>
+                    </div>
+                    </div>
                   {%- when 'link_list' -%}
                     {%- if block.settings.menu != blank -%}
                       <ul class="footer-block__details-content list-unstyled">
@@ -242,9 +444,9 @@
             </div>
           {%- endif -%}
 
-          {%- if section.settings.show_social and has_social_icons -%}
+          {% comment %} {%- if section.settings.show_social and has_social_icons -%}
             {%- render 'social-icons', class: 'footer__list-social' -%}
-          {%- endif -%}
+          {%- endif -%} {% endcomment %}
         </div>
       </div>
     {%- endunless -%}
@@ -256,7 +458,91 @@
       data-cascade
     {% endif %}
   >
-    <div class="footer__content-bottom-wrapper page-width">
+
+    {% style %}
+      .footer-marquee {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+          white-space: nowrap;
+      }
+
+      .footer-marquee__track {
+          display: flex;
+          width: max-content;
+          will-change: transform;
+      }
+
+      .footer-marquee__item {
+          flex-shrink: 0;
+
+          padding-right: 80px;
+
+          font-family: "General Sans Variable", sans-serif;
+          font-size: 180px;
+          font-weight: 700;
+          line-height: 0.85;
+          text-transform: uppercase;
+
+          color: rgba(255,255,255,.08);
+      }
+
+      .footer-marquee__track--animated {
+          animation-name: footer-marquee;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+      }
+
+      @keyframes footer-marquee {
+          from {
+              transform: translateX(0);
+          }
+
+          to {
+              transform: translateX(calc(-1 * var(--marquee-width)));
+          }
+      }
+    {% endstyle %}
+    <div class="footer-marquee">
+      <div
+        class="footer-marquee__track"
+        data-speed="{{ section.settings.marquee_speed }}"
+      >
+        <span class="footer-marquee__item">
+          {{ section.settings.marquee_text }}
+        </span>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+
+        const marquees = document.querySelectorAll('.footer-marquee');
+
+        marquees.forEach((marquee) => {
+            const track = marquee.querySelector('.footer-marquee__track');
+            const item = track.querySelector('.footer-marquee__item');
+
+            if (!track || !item) return;
+
+            const speed = Number(track.dataset.speed) || 80;
+            const itemWidth = item.offsetWidth;
+            const screenWidth = window.innerWidth;
+            const requiredCopies = Math.ceil((screenWidth * 2) / itemWidth) + 2;
+
+            for (let i = 1; i < requiredCopies; i++) {
+                track.appendChild(item.cloneNode(true));
+            }
+            track.style.setProperty('--marquee-width', `${itemWidth}px`);
+
+            const duration = itemWidth / speed;
+            track.style.animationDuration = `${duration}s`;
+            track.classList.add('footer-marquee__track--animated');
+
+        });
+
+    });
+  </script>
+    {% comment %} <div class="footer__content-bottom-wrapper page-width">
       <div class="footer__column footer__localization isolate">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <localization-form>
@@ -317,7 +603,7 @@
           </ul>
         {%- endif -%}
       </div>
-    </div>
+    </div> {% endcomment %}
   </div>
 </footer>
 
@@ -327,6 +613,27 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "newsletter",
+      "name": "newsletter",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "section title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "text",
+          "id": "newsletter_title",
+          "label": "Newsletter Heading"
+        }
+      ]
     },
     {
       "type": "link_list",
@@ -491,6 +798,21 @@
       "default": true,
       "label": "t:sections.footer.settings.show_policy.label",
       "info": "t:sections.footer.settings.show_policy.info"
+    },
+    {
+      "type": "text",
+      "id": "marquee_text",
+      "label": "Marquee Text",
+      "default": "DR STENGLER STENGLER"
+    },
+    {
+      "type": "range",
+      "id": "marquee_speed",
+      "label": "Animation Speed",
+      "min": 20,
+      "max": 200,
+      "step": 10,
+      "default": 80
     },
     {
       "type": "header",

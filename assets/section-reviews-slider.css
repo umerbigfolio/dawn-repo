@@ -3,12 +3,12 @@
   padding-bottom: var(--reviews-slider-padding-bottom);
 }
 
-.reviews-slider__container {
+/* .reviews-slider__container {
   max-width: 1440px;
   margin: 0 auto;
   padding-left: 25px;
   padding-right: 25px;
-}
+} */
 
 .reviews-slider__header {
   max-width: 524px;
@@ -44,11 +44,8 @@
   padding-top: 40px;
 }
 
-.reviews-slider__swiper {
-  overflow: hidden;
-}
-
 .reviews-slider__wrapper {
+  padding: 0px 50px;  
   align-items: stretch;
 }
 
@@ -95,7 +92,7 @@
 
 .review-card__content {
   flex: 1;
-  min-height: 250px;
+  min-height: 150px;
   color: var(--reviews-slider-card-text-color);
   font-family: "General Sans Variable", sans-serif;
   font-weight: 500;

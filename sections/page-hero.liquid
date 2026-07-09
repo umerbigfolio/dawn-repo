@@ -31,7 +31,7 @@
 
           {% if section.settings.breadcrumb != blank %}
             <div class="page-hero__breadcrumb">
-              {{ section.settings.breadcrumb }}
+              {% render 'breadcrumb' %}
             </div>
           {% endif %}
 
