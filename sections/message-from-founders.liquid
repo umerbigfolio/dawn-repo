@@ -1,0 +1,263 @@
+{{ 'section-message-from-founders.css' | asset_url | stylesheet_tag }}
+
+<section
+  class="message-founders"
+  style="
+    --message-founders-background: {{ section.settings.background_color }};
+    --message-founders-radius: {{ section.settings.border_radius }}px;
+    --message-founders-padding-top: {{ section.settings.padding_top }}px;
+    --message-founders-padding-bottom: {{ section.settings.padding_bottom }}px;
+    --message-founders-title-color: {{ section.settings.title_color }};
+    --message-founders-title-size: {{ section.settings.title_size }}px;
+    --message-founders-text-color: {{ section.settings.text_color }};
+    --message-founders-text-size: {{ section.settings.text_size }}px;
+    --message-founders-left-width: {{ section.settings.left_width }}px;
+    --message-founders-right-width: {{ section.settings.right_width }}px;
+    --message-founders-column-gap: {{ section.settings.column_gap }}px;
+    --message-founders-avatar-size: {{ section.settings.avatar_size }}px;
+  "
+>
+
+  <div class="message-founders__container">
+
+    <div class="message-founders__wrapper">
+
+      <div class="message-founders__content">
+
+        <div
+          class="message-founders__left"
+          style="max-width: var(--message-founders-left-width);"
+        >
+
+          {% if section.settings.title != blank %}
+            <h2 class="message-founders__title">
+              {{ section.settings.title }}
+            </h2>
+          {% endif %}
+
+          <div class="message-founders__avatars">
+
+            {% if section.settings.avatar_1 != blank %}
+              {{
+                section.settings.avatar_1
+                | image_url: width: 200
+                | image_tag:
+                  class: 'message-founders__avatar-image',
+                  loading: 'lazy'
+              }}
+            {% endif %}
+
+            {% if section.settings.avatar_2 != blank %}
+              {{
+                section.settings.avatar_2
+                | image_url: width: 200
+                | image_tag:
+                  class: 'message-founders__avatar-image',
+                  loading: 'lazy'
+              }}
+            {% endif %}
+
+            {% if section.settings.avatar_3 != blank %}
+              {{
+                section.settings.avatar_3
+                | image_url: width: 200
+                | image_tag:
+                  class: 'message-founders__avatar-image',
+                  loading: 'lazy'
+              }}
+            {% endif %}
+
+          </div>
+
+        </div>
+
+        <div
+          class="message-founders__right"
+          style="max-width: var(--message-founders-right-width);"
+        >
+
+          <div class="message-founders__description">
+
+            {{ section.settings.description }}
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Message From Founders",
+  "tag": "section",
+  "class": "section-message-founders",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#EAF1FB"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 24,
+      "label": "Border Radius"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 40,
+      "label": "Padding Top"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 40,
+      "label": "Padding Bottom"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "left_width",
+      "label": "Left Width",
+      "min": 250,
+      "max": 600,
+      "step": 10,
+      "unit": "px",
+      "default": 410
+    },
+    {
+      "type": "range",
+      "id": "right_width",
+      "label": "Right Width",
+      "min": 400,
+      "max": 1000,
+      "step": 10,
+      "unit": "px",
+      "default": 850
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "label": "Column Gap",
+      "min": 20,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 46
+    },
+    {
+      "type": "range",
+      "id": "avatar_size",
+      "label": "Avatar Size",
+      "min": 40,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 55
+    },
+    {
+      "type": "header",
+      "content": "Title"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "A message from Dr. Mark and Angela Stengler"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#182941"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title Size",
+      "min": 24,
+      "max": 70,
+      "step": 2,
+      "unit": "px",
+      "default": 44
+    },
+    {
+      "type": "header",
+      "content": "Description"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>We are passionate about nutritional and holistic healthcare.</p>"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#182941"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text Size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "avatar_1",
+      "label": "Avatar 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "avatar_2",
+      "label": "Avatar 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "avatar_3",
+      "label": "Avatar 3"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Message From Founders"
+    }
+  ]
+}
+{% endschema %}

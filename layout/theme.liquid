@@ -322,7 +322,9 @@
       }
     </script>
 
-    <link href="https://db.onlinewebfonts.com/c/7b7a625024c0f39cbca2cf9674f51d94?family=General+Sans+Variable" rel="stylesheet">
+    {% if template.suffix == 'about-us' %}
+      {{ 'about-us.css' | asset_url | stylesheet_tag }}
+    {% endif %}  
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">

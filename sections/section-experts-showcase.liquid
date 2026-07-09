@@ -1,0 +1,324 @@
+{{ 'section-experts-showcase.css' | asset_url | stylesheet_tag }}
+
+<section
+  class="experts-showcase"
+  style="
+    --experts-showcase-background: {{ section.settings.background_color }};
+    --experts-showcase-radius: {{ section.settings.border_radius }}px;
+    --experts-showcase-padding-top: {{ section.settings.padding_top }}px;
+    --experts-showcase-padding-bottom: {{ section.settings.padding_bottom }}px;
+    --experts-showcase-heading-color: {{ section.settings.heading_color }};
+    --experts-showcase-heading-size: {{ section.settings.heading_size }}px;
+    --experts-showcase-text-color: {{ section.settings.text_color }};
+    --experts-showcase-text-size: {{ section.settings.text_size }}px;
+    --experts-showcase-card-background: {{ section.settings.card_background }};
+    --experts-showcase-card-radius: {{ section.settings.card_radius }}px;
+    --experts-showcase-image-radius: {{ section.settings.image_radius }}px;
+  "
+>
+
+  <div class="experts-showcase__container">
+    <div class="experts-showcase__wrapper">
+      <div class="experts-showcase__header">
+        {% if section.settings.heading != blank %}
+          <h2 class="experts-showcase__heading">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <div class="experts-showcase__description">
+            {{ section.settings.description }}
+          </div>
+        {% endif %}
+      </div>
+      <div class="experts-showcase__cards">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'expert_card' %}
+              <div
+                class="expert-card"
+                {{ block.shopify_attributes }}
+              >
+                <div class="expert-card__content">
+                  <div class="expert-card__left">
+                    {% if block.settings.image != blank %}
+                      <div class="expert-card__image">
+                        {{
+                          block.settings.image
+                          | image_url: width: 800
+                          | image_tag:
+                            class: 'expert-card__image-element',
+                            loading: 'lazy'
+                        }}
+                      </div>
+                    {% endif %}
+
+                    <div class="expert-card__author">
+                      {% if block.settings.name != blank %}
+                        <div class="expert-card__name">
+                          {{ block.settings.name }}
+                        </div>
+                      {% endif %}
+
+                      {% if block.settings.subtitle != blank %}
+                        <div class="expert-card__subtitle">
+                          {{ block.settings.subtitle }}
+                        </div>
+                      {% endif %}
+                    </div>
+                  </div>
+
+                  <div class="expert-card__right">
+                    {% if block.settings.content_title != blank %}
+                      <div class="expert-card__content-title">
+                        {{ block.settings.content_title }}
+                      </div>
+                    {% endif %}
+
+                    {% if block.settings.content != blank %}
+                      <div class="expert-card__content-text">
+                        {{ block.settings.content }}
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+
+            {% when 'profile_card' %}
+
+              <div
+                class="profile-card"
+                {{ block.shopify_attributes }}
+              >
+                <div class="profile-card__content">
+                  {% if block.settings.image != blank %}
+                    <div class="profile-card__image">
+                      {{
+                        block.settings.image
+                        | image_url: width: 700
+                        | image_tag:
+                          class: 'profile-card__image-element',
+                          loading: 'lazy'
+                      }}
+                    </div>
+                  {% endif %}
+
+                  <div class="profile-card__author">
+                    {% if block.settings.name != blank %}
+                      <div class="profile-card__name">
+                        {{ block.settings.name }}
+                      </div>
+                    {% endif %}
+
+                    {% if block.settings.subtitle != blank %}
+                      <div class="profile-card__subtitle">
+                        {{ block.settings.subtitle }}
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Experts Showcase",
+  "tag": "section",
+  "class": "section-experts-showcase",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#D3ECE3"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border Radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Get to know your doctors"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#182941"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading Size",
+      "min": 24,
+      "max": 70,
+      "step": 2,
+      "unit": "px",
+      "default": 44
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Description Color",
+      "default": "#182941"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Description Size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Cards"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card Background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "label": "Card Border Radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "image_radius",
+      "label": "Image Border Radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    }
+  ],
+  "blocks": [
+    {
+      "type": "expert_card",
+      "name": "Expert Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Doctor Image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Doctor Name",
+          "default": "Dr Mark Stengler"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Author/coauthor of books on holistic healthcare"
+        },
+        {
+          "type": "text",
+          "id": "content_title",
+          "label": "Content Heading",
+          "default": "2025 Top Holistic Doctor of the Year"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    },
+    {
+      "type": "profile_card",
+      "name": "Profile Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Profile Image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Dr Angela Stengler"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Author/coauthor of books on holistic healthcare"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Experts Showcase",
+      "blocks": [
+        {
+          "type": "expert_card"
+        },
+        {
+          "type": "profile_card"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

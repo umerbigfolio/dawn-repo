@@ -1135,7 +1135,7 @@ summary::-webkit-details-marker {
   background-color: transparent;
 }
 
-.media > *:not(.zoom):not(.deferred-media__poster-button),
+.media > *:not(.zoom):not(.deferred-media__poster-button):not(.video-button),
 .media model-viewer {
   display: block;
   max-width: 100%;
@@ -3622,4 +3622,11 @@ details-disclosure > details {
   100% {
     transform: translateX(100%) scaleX(0);
   }
+}
+
+@font-face {
+    font-family: 'General Sans Variable';
+    font-style: normal;
+    font-weight: normal;
+    src: local('General Sans Regular'), url('https://cdn.shopify.com/s/files/1/0783/5893/7789/files/GeneralSans-Regular.woff?v=1783597584') format('woff');
 }

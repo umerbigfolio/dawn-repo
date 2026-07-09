@@ -1,0 +1,140 @@
+.content-media {
+  padding-top: var(--content-media-padding-top);
+  padding-bottom: var(--content-media-padding-bottom);
+}
+
+.content-media__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.content-media__wrapper {
+  background: var(--content-media-background);
+  border-radius: var(--content-media-radius);
+  padding: 40px;
+  overflow: hidden;
+}
+
+.content-media__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: var(--content-media-column-gap);
+}
+
+.content-media__content--reverse {
+  flex-direction: row-reverse;
+}
+
+.content-media__image {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.content-media__image-element {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--content-media-image-radius);
+  object-fit: cover;
+}
+
+.content-media__text {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.content-media__heading {
+  margin: 0;
+  padding-bottom: 20px;
+  color: var(--content-media-heading-color);
+  font-family: "General Sans Variable", sans-serif;
+  font-weight: 600;
+  font-size: var(--content-media-heading-size);
+  line-height: 54px;
+  letter-spacing: -0.02em;
+}
+
+.content-media__description {
+  color: var(--content-media-description-color);
+  font-family: "General Sans Variable", sans-serif;
+  font-weight: 400;
+  font-size: var(--content-media-description-size);
+  line-height: 24px;
+  letter-spacing: 0.02em;
+}
+
+.content-media__description p {
+  margin: 0;
+}
+
+.content-media__description p:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 1199px) {
+  .content-media__wrapper {
+    padding: 32px;
+  }
+
+  .content-media__content {
+    column-gap: 48px;
+  }
+
+  .content-media__heading {
+    line-height: 1.2;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .content-media__content,
+  .content-media__content--reverse {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  .content-media__image,
+  .content-media__text {
+    max-width: 100% !important;
+  }
+
+  .content-media__text {
+    text-align: center;
+  }
+
+  .content-media__heading {
+    line-height: 1.2;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content-media {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .content-media__container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .content-media__wrapper {
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .content-media__content {
+    row-gap: 24px;
+  }
+
+  .content-media__heading {
+    padding-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .content-media__description {
+    line-height: 1.7;
+  }
+}
