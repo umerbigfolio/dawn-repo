@@ -37,7 +37,7 @@
         "description": "<p>Doctor-formulated solutions based on decades of clinical experience and modern research.</p>",
         "description_color": "#ffffff",
         "description_size": 16,
-        "image": "shopify://shop_images/Group_43.jpg"
+        "image": "shopify://shop_images/Group_43.png"
       }
     },
     "message_from_founders_qpEBAp": {
@@ -69,8 +69,8 @@
       "settings": {
         "background_color": "#f3f3f3",
         "border_radius": 24,
-        "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_top": 52,
+        "padding_bottom": 52,
         "image_position": "left",
         "image_width": 820,
         "text_width": 410,
@@ -153,8 +153,8 @@
       "settings": {
         "background_color": "#d3ece3",
         "border_radius": 24,
-        "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_top": 52,
+        "padding_bottom": 52,
         "heading": "Get to know your doctors",
         "heading_color": "#182941",
         "heading_size": 44,
@@ -164,6 +164,88 @@
         "card_background": "#ffffff",
         "card_radius": 16,
         "image_radius": 12
+      }
+    },
+    "reviews_carousel_87FpaD": {
+      "type": "reviews-carousel",
+      "blocks": {
+        "review_gq4zV3": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_date": "24 Sep 2025",
+            "review": "<p>I've been using this wellness product daily, and I already feel more energetic and refreshed. It fits perfectly into my routine.</p>",
+            "author": "Sara Wellness"
+          }
+        },
+        "review_8GfTR4": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_date": "24 Sep 2025",
+            "review": "<p>I've been using this wellness product daily, and I already feel more energetic and refreshed. It fits perfectly into my routine.</p>",
+            "author": "Sara Wellness"
+          }
+        },
+        "review_Fzrb9n": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_date": "24 Sep 2025",
+            "review": "<p>I've been using this wellness product daily, and I already feel more energetic and refreshed. It fits perfectly into my routine.</p>",
+            "author": "Sara Wellness"
+          }
+        },
+        "review_yY8CQi": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_date": "24 Sep 2025",
+            "review": "<p>I've been using this wellness product daily, and I already feel more energetic and refreshed. It fits perfectly into my routine.</p>",
+            "author": "Sara Wellness"
+          }
+        },
+        "review_UfLPcy": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_date": "24 Sep 2025",
+            "review": "<p>I've been using this wellness product daily, and I already feel more energetic and refreshed. It fits perfectly into my routine.</p>",
+            "author": "Sara Wellness"
+          }
+        }
+      },
+      "block_order": [
+        "review_gq4zV3",
+        "review_8GfTR4",
+        "review_Fzrb9n",
+        "review_yY8CQi",
+        "review_UfLPcy"
+      ],
+      "name": "Reviews Carousel",
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "heading": "Trusted By 100+ People",
+        "heading_color": "#182941",
+        "heading_size": 44,
+        "description": "<p>These are the same formulas used in our clinic to support real patients.</p>",
+        "text_color": "#182941",
+        "text_size": 20,
+        "card_background": "#182941",
+        "card_text_color": "#F3F3F3",
+        "card_radius": 24,
+        "date_size": 14,
+        "review_size": 16,
+        "author_size": 16,
+        "desktop_slides": 4,
+        "tablet_slides": 2,
+        "mobile_slides": 1,
+        "card_gap": 12,
+        "edge_padding": 52,
+        "desktop_card_width": 340,
+        "tablet_card_width": 320,
+        "mobile_card_width": 280
       }
     },
     "reviews_slider_meE7QV": {
@@ -227,6 +309,7 @@
         "review_bzNmYx",
         "review_nk4Y8k"
       ],
+      "disabled": true,
       "name": "Reviews Slider",
       "settings": {
         "padding_top": 0,
@@ -258,6 +341,7 @@
     "section_content_media_AJDB8a",
     "video_MrGj8L",
     "section_experts_showcase_TUiXMP",
+    "reviews_carousel_87FpaD",
     "reviews_slider_meE7QV"
   ]
 }

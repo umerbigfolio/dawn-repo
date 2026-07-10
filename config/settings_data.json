@@ -107,7 +107,7 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
-    "brand_description": "<p>As Naturopathic Medical Doctors, we have training in both conventional and nutritional/holistic therapies. Unlike many doctors, we value non-toxic, natural therapies as the primary focus of our treatments.<br/><br/>Address: <br/>105- 8 Islin Bay, New Jersey<br/><br/></p>",
+    "brand_description": "<p>As Naturopathic Medical Doctors, we have training in both conventional and nutritional/holistic therapies. Unlike many doctors, we value non-toxic, natural therapies as the primary focus of our treatments.<br/><br/><em>Address: </em><br/>105- 8 Islin Bay, New Jersey<br/><br/></p>",
     "brand_image": "shopify://shop_images/image_3.png",
     "brand_image_width": 80,
     "social_facebook_link": "#",
