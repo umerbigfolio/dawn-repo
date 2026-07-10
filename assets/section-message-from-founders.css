@@ -37,7 +37,7 @@
   margin: 0;
   padding-bottom: 40px;
   color: var(--message-founders-title-color);
-  font-family: "General Sans Variable", sans-serif;
+  font-family: "General Sans Variable Semibold";
   font-weight: 600;
   font-size: var(--message-founders-title-size);
   line-height: 54px;
@@ -63,7 +63,7 @@
 .message-founders__description {
   color: var(--message-founders-text-color);
   font-family: "General Sans Variable", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: var(--message-founders-text-size);
   line-height: 24px;
   letter-spacing: 0.02em;

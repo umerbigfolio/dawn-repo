@@ -127,9 +127,9 @@
 
                       .footer-newsletter__input {
                           width: 100%;
-                          height: 50px;
+                          height: 56px;
                           padding: 0 56px 0 18px;
-                          border: 2px solid #F2A7A0;
+                          border: 1px solid #FF5353;
                           border-radius: 999px;
                           background: #ffffff;
                           color: #182941;
@@ -159,7 +159,7 @@
                           height: 42px;
                           border: 0;
                           border-radius: 50%;
-                          background: #A4A9B3;
+                          background: #B7B7B8;
                           color: #ffffff;
                           cursor: pointer;
                           transition: .3s ease;
@@ -206,6 +206,12 @@
 
                       .footer-newsletter__field {
                           position: relative;
+                          width: 338px;
+                      }
+
+                      .footer-newsletter__button-icon {
+                          position: relative;
+                          top: 3px;
                       }
 
                       @media (max-width: 749px) {
@@ -262,7 +268,7 @@
                                     aria-label="{{ 'newsletter.button_label' | t }}"
                                   >
                                     <span class="footer-newsletter__button-icon">
-                                      {{ 'icon-arrow.svg' | inline_asset_content }}
+                                      {% render 'newsletter-icon' %}
                                     </span>
                                   </button>
                                 </div>

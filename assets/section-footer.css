@@ -11,6 +11,11 @@
   display: block;
 }
 
+.footer-block__brand-info em {
+    color: rgba(255, 255, 255, 1);
+    font-style: normal;
+}
+
 @media screen and (max-width: 749px) {
   .footer .grid {
     display: block;
@@ -345,7 +350,7 @@
 
 .footer-block__details-content .list-menu__item--link,
 .copyright__content a {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 1);
 }
 
 .footer-block__details-content .list-menu__item--active {
@@ -536,7 +541,22 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0%;
-  color: white;
+  color: rgba(255,255,255, 1);
+}
+
+.footer-newsletter__social .svg-wrapper,
+.footer-newsletter__social .list-social__item .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-newsletter__social .list-social__item .icon path {
+  fill: #B0B0B0;
+}
+
+.footer-newsletter__social .list-social__link {
+  padding: 0;
+  padding-right: 24px;
 }
 
 @media(min-width: 1085px) {

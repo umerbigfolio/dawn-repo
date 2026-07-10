@@ -2379,23 +2379,15 @@ input[type='checkbox'] {
 
 @media (max-width: 990px) {
   .header {
-    grid-template-areas: "icons heading left-icons";
+    grid-template-areas: "left-icons heading icons";
   }
 
   .header__icons .header-button {
     display: none;
   }
 
-  .header .header__icons {
-    justify-self: start;
-  }
-
   .header .header__icon--menu {
     position: relative;
-  }
-
-  .header  header-drawer {
-    justify-self: end;
   }
 }
 
@@ -2486,7 +2478,8 @@ input[type='checkbox'] {
 
 .header__heading-link {
   display: inline-block;
-  padding: 0.75rem;
+  /* padding: 0.75rem; */
+  padding-left: 0.75rem;
   text-decoration: none;
   word-break: break-word;
 }
@@ -2849,7 +2842,7 @@ details[open] > .header__submenu {
 .header__menu-item {
   padding: 15px;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
   font-size: 16px;
   font-weight: 600;
 }
@@ -3660,6 +3653,13 @@ details-disclosure > details {
     font-style: normal;
     font-weight: normal;
     src: local('General Sans Regular'), url('https://cdn.shopify.com/s/files/1/0783/5893/7789/files/GeneralSans-Regular.woff?v=1783597584') format('woff');
+}
+
+@font-face {
+    font-family: 'General Sans Variable Semibold';
+    font-style: normal;
+    font-weight: 600;
+    src: local('General Sans Regular'), url('https://cdn.shopify.com/s/files/1/0783/5893/7789/files/GeneralSans-Semibold.woff?v=1783697649') format('woff');
 }
 
 /* custom css */

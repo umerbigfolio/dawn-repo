@@ -4,6 +4,16 @@
     padding: 0 25px;
 }
 
+.footer__content-top.page-width {
+    padding: 0 40px;
+}
+
+@media(max-width: 749px) {
+    .footer__content-top.page-width {
+        padding: 0 16px;
+    }
+}
+
 .video-button {
     display: inline-flex;
     align-items: center;
@@ -36,11 +46,11 @@
     flex-shrink: 0;
 }
 
-.video-button__play {
+/* .video-button__play {
     width: 12px;
     height: 12px;
     margin-left: 2px;
-}
+} */
 
 .video-button__text {
     font-family: "General Sans Variable", sans-serif;
@@ -49,6 +59,10 @@
     line-height: 1;
     color: #182941;
     white-space: nowrap;
+}
+
+.video-section .video-section__media iframe {
+    border-radius: 20px;;
 }
 
 @media (max-width: 749px) {
