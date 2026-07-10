@@ -213,6 +213,24 @@
             "review": "<p>I've been using this wellness product daily, and I already feel more energetic and refreshed. It fits perfectly into my routine.</p>",
             "author": "Sara Wellness"
           }
+        },
+        "review_Jxfg4b": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_date": "24 Sep 2025",
+            "review": "<p>I've been using this wellness product daily, and I already feel more energetic and refreshed. It fits perfectly into my routine.</p>",
+            "author": "Sara Wellness"
+          }
+        },
+        "review_FLQiNe": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_date": "24 Sep 2025",
+            "review": "<p>I've been using this wellness product daily, and I already feel more energetic and refreshed. It fits perfectly into my routine.</p>",
+            "author": "Sara Wellness"
+          }
         }
       },
       "block_order": [
@@ -220,7 +238,9 @@
         "review_8GfTR4",
         "review_Fzrb9n",
         "review_yY8CQi",
-        "review_UfLPcy"
+        "review_UfLPcy",
+        "review_Jxfg4b",
+        "review_FLQiNe"
       ],
       "name": "Reviews Carousel",
       "settings": {
