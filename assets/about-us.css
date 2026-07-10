@@ -9,6 +9,9 @@
 }
 
 @media(max-width: 749px) {
+    .video-section__media img {
+        border-radius: 20px;
+    }
     .footer__content-top.page-width {
         padding: 0 16px;
     }
@@ -20,7 +23,7 @@
     column-gap: 10px;
     padding: 11px 27px 11px 11px;
     background-color: #ffffff;
-    border-radius: 999px;
+    border-radius: 99px;
     text-decoration: none;
     transition: all .3s ease;
     cursor: pointer;
@@ -69,7 +72,7 @@
     .video-button {
         column-gap: 6px;
         padding: 7px 17px 7px 7px;
-        border-radius: 999px;
+        border-radius: 20px;
         left: 10px;
         bottom: 10px;
     }
