@@ -160,7 +160,7 @@
   margin-bottom: 2rem;
   margin-top: 0;
   font-size: calc(var(--font-heading-scale) * 1.6rem);
-  font-family: General Sans Variable;
+  font-family: 'General Sans Variable Medium';
   font-weight: 500;
   font-size: 24px;
   line-height: 100%;
@@ -527,7 +527,7 @@
 }
 
 .footer-block__brand-info .rte {
-  font-family: General Sans Variable;
+  font-family: 'General Sans Variable Medium';
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -535,7 +535,7 @@
 }
 
 .footer-block__details-content .list-menu__item--link {
-  font-family: General Sans Variable;
+  font-family: 'General Sans Variable Medium';
   font-weight: 500;
   font-style: Medium;
   font-size: 16px;

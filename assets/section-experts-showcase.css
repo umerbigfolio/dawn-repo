@@ -87,7 +87,7 @@
 
 .expert-card__name {
   color: #182941;
-  font-family: "General Sans Variable", sans-serif;
+  font-family: "General Sans Variable Semibold", sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
@@ -96,7 +96,7 @@
 
 .expert-card__subtitle {
   color: gray;
-  font-family: "General Sans Variable", sans-serif;
+  font-family: "General Sans Variable Medium", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -116,7 +116,7 @@
 .expert-card__content-title {
   margin-bottom: 16px;
   color: #182941;
-  font-family: "General Sans Variable", sans-serif;
+  font-family: "General Sans Variable Semibold", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -125,7 +125,7 @@
 
 .expert-card__content-text {
   color: #182941;
-  font-family: "General Sans Variable", sans-serif;
+  font-family: "General Sans Variable Medium", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
@@ -134,6 +134,7 @@
 
 .expert-card__content-text p {
   margin: 0 0 16px;
+  font-family: General Sans Variable Semibold, sans-serif;
 }
 
 .expert-card__content-text p:last-child {
@@ -161,6 +162,12 @@
   padding: 20px;
 }
 
+@media (min-width: 1024px) {
+  .profile-card__image-element {
+    min-height: 411px;
+  }
+}
+
 @media (min-width: 749px) {
   .profile-card__content {
     width: 426px;
@@ -186,7 +193,7 @@
 
 .profile-card__name {
   color: #182941;
-  font-family: "General Sans Variable", sans-serif;
+  font-family: "General Sans Variable Semibold", sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
@@ -195,7 +202,7 @@
 
 .profile-card__subtitle {
   color: gray;
-  font-family: "General Sans Variable", sans-serif;
+  font-family: "General Sans Variable Medium", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;

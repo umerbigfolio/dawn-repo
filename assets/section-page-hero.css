@@ -71,7 +71,7 @@
 
 .page-hero__description {
   color: var(--page-hero-description-color);
-  font-family: "General Sans Variable", sans-serif;
+  font-family: "General Sans Variable Medium", sans-serif;
   font-weight: 500;
   font-size: var(--page-hero-description-size);
   line-height: 24px;

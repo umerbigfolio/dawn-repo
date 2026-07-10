@@ -45,19 +45,19 @@
 
 .reviews-carousel__slider {
   position: relative;
+  overflow: hidden;
 }
 
 .reviews-carousel__track {
   display: flex;
   gap: var(--reviews-carousel-card-gap);
   overflow-x: auto;
-  overflow-y: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  padding-inline: var(--reviews-carousel-edge-padding);
   scrollbar-width: none;
   -ms-overflow-style: none;
   cursor: grab;
+  margin-left: -180px;
 }
 
 .reviews-carousel__track:active {

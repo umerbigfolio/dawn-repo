@@ -76,7 +76,7 @@
                 {% endif %}
               >
                 {%- if block.settings.heading != blank -%}
-                  <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>
+                  <h2 class="footer-block__heading inline-richtext {% if block.type == 'link_list' %} footer-block--menu-heading{% endif %}">{{- block.settings.heading -}}</h2>
                 {%- endif -%}
 
                 {%- case block.type -%}
@@ -96,7 +96,7 @@
                           margin: 0;
                           padding-bottom: 20px;
                           color: #ffffff;
-                          font-family: "General Sans Variable", sans-serif;
+                          font-family: "General Sans Variable Medium", sans-serif;
                           font-weight: 500;
                           font-size: 24px;
                           line-height: 100%;
@@ -105,7 +105,7 @@
                       .footer-newsletter__description {
                           margin-bottom: 20px;
                           color: #FFFFFF;
-                          font-family: "General Sans Variable", sans-serif;
+                          font-family: "General Sans Variable Medium", sans-serif;
                           font-weight: 500;
                           font-size: 16px;
                           line-height: 24px;
@@ -115,7 +115,7 @@
                           display: inline-block;
                           margin-bottom: 10px;
                           color: #ffffff;
-                          font-family: "General Sans Variable", sans-serif;
+                          font-family: "General Sans Variable Medium", sans-serif;
                           font-weight: 500;
                           font-size: 14px;
                           line-height: 100%;

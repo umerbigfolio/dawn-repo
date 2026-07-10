@@ -2867,6 +2867,7 @@ details[open] > .header__submenu {
 .header__menu-item span {
   transition: text-decoration var(--duration-short) ease;
   letter-spacing: 0;
+  font-family: 'General Sans Variable Semibold';
 }
 
 .header__menu-item:hover span {
@@ -3661,6 +3662,17 @@ details-disclosure > details {
   }
 }
 
+/* custom css */
+@media (max-width: 749px) {
+  .header__icon,
+  .header__icon--cart .icon,
+  .header__icon span {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+/* Custom Font Family */
 @font-face {
     font-family: 'General Sans Variable';
     font-style: normal;
@@ -3675,12 +3687,9 @@ details-disclosure > details {
     src: local('General Sans Regular'), url('https://cdn.shopify.com/s/files/1/0783/5893/7789/files/GeneralSans-Semibold.woff?v=1783697649') format('woff');
 }
 
-/* custom css */
-@media (max-width: 749px) {
-  .header__icon,
-  .header__icon--cart .icon,
-  .header__icon span {
-    height: 40px;
-    width: 40px;
-  }
+@font-face {
+    font-family: 'General Sans Variable Medium';
+    font-style: normal;
+    font-weight: 500;
+    src: local('General Sans Regular'), url('https://cdn.shopify.com/s/files/1/0783/5893/7789/files/GeneralSans-Medium.woff?v=1783709883') format('woff');
 }
