@@ -191,8 +191,8 @@
 
 @media screen and (max-width: 767px) {
   .reviews-slider {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .reviews-slider__container {
@@ -202,10 +202,12 @@
 
   .reviews-slider__heading {
     line-height: 1.2;
+    font-size: 34px;
   }
 
   .reviews-slider__description {
-    line-height: 1.6;
+    line-height: 1.3;
+    font-size: 16px;
   }
 
   .reviews-slider__content {
@@ -229,5 +231,11 @@
 
   .reviews-slider__pagination {
     margin-top: 24px;
+  }
+
+  .review-card__content,
+  .review-card__author {
+    font-size: 14px;
+    line-height: 1.3;
   }
 }

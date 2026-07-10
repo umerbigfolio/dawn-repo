@@ -50,3 +50,22 @@
     color: #182941;
     white-space: nowrap;
 }
+
+@media (max-width: 749px) {
+    .video-button {
+        column-gap: 6px;
+        padding: 7px 17px 7px 7px;
+        border-radius: 999px;
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .video-button__icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .video-button__text {
+        font-size: 12px;
+    }
+}

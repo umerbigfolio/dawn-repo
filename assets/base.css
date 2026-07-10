@@ -2377,6 +2377,28 @@ input[type='checkbox'] {
   align-items: center;
 }
 
+@media (max-width: 990px) {
+  .header {
+    grid-template-areas: "icons heading left-icons";
+  }
+
+  .header__icons .header-button {
+    display: none;
+  }
+
+  .header .header__icons {
+    justify-self: start;
+  }
+
+  .header .header__icon--menu {
+    position: relative;
+  }
+
+  .header  header-drawer {
+    justify-self: end;
+  }
+}
+
 @media screen and (max-width: 749px) {
   .header--has-app {
     grid-template-columns: auto 1fr auto;
@@ -2405,7 +2427,7 @@ input[type='checkbox'] {
 
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr auto 2fr;
     /* column-gap: 2rem; */
   }
 
@@ -2432,6 +2454,14 @@ input[type='checkbox'] {
 
   .header:not(.header--middle-left, .header--middle-center) .header__inline-menu {
     margin-top: 1.05rem;
+  }
+}
+
+@media (min-width: 1350px) {
+  .header--middle-left {
+    grid-template-areas: 'heading navigation icons';
+    grid-template-columns: 1fr 2fr 1fr;
+    /* column-gap: 2rem; */
   }
 }
 
@@ -2565,7 +2595,7 @@ input[type='checkbox'] {
 
 .header__icon:hover .icon,
 .modal__close-button:hover .icon {
-  transform: scale(1.07);
+  /* transform: scale(1.07); */
 }
 
 .header__icon .icon {
@@ -2596,6 +2626,7 @@ input[type='checkbox'] {
   display: block;
   position: absolute;
   background: rgba(var(--color-foreground), 0.5);
+  display: none;
 }
 
 .header__icon--account shop-user-avatar {
@@ -2741,7 +2772,7 @@ details[open] .modal-overlay::after {
   display: block;
   position: absolute;
   opacity: 1;
-  transform: scale(1);
+  /* transform: scale(1); */
   transition: transform 150ms ease, opacity 150ms ease;
 }
 
@@ -3629,4 +3660,14 @@ details-disclosure > details {
     font-style: normal;
     font-weight: normal;
     src: local('General Sans Regular'), url('https://cdn.shopify.com/s/files/1/0783/5893/7789/files/GeneralSans-Regular.woff?v=1783597584') format('woff');
+}
+
+/* custom css */
+@media (max-width: 749px) {
+  .header__icon,
+  .header__icon--cart .icon,
+  .header__icon span {
+    height: 40px;
+    width: 40px;
+  }
 }
