@@ -2395,6 +2395,19 @@ input[type='checkbox'] {
   .header--has-app {
     grid-template-columns: auto 1fr auto;
   }
+
+  .header {
+      grid-template-areas: "heading icons left-icons";
+      grid-template-columns: 1fr 1fr auto;
+  }
+
+  .header header-drawer {
+    justify-self: end;
+  }
+
+  .header .header__icons {
+    padding-right: 1.8rem;
+  }
 }
 
 @media screen and (min-width: 990px) {
