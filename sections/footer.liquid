@@ -129,7 +129,6 @@
                           width: 100%;
                           height: 56px;
                           padding: 0 56px 0 18px;
-                          border: 1px solid #FF5353;
                           border-radius: 999px;
                           background: #ffffff;
                           color: #182941;
@@ -145,6 +144,7 @@
 
                       .footer-newsletter__input:focus {
                           border-color: #ffffff;
+                          border: 0;
                       }
 
                       .footer-newsletter__button {
@@ -172,14 +172,6 @@
                       .footer-newsletter__icon {
                           width: 18px;
                           height: 18px;
-                      }
-
-                      .footer-newsletter__error {
-                          margin-top: 8px;
-                          color: #FF7E7E;
-                          font-family: "General Sans Variable", sans-serif;
-                          font-size: 12px;
-                          line-height: 18px;
                       }
 
                       .footer-newsletter__social {
@@ -278,6 +270,12 @@
                                     </span>
                                   </button>
                                 </div>
+                                <small
+                                  class="footer-newsletter__error footer-newsletter__error--client"
+                                  hidden
+                                >
+                                  Please enter a valid email address
+                                </small>
                                 {% if form.errors %}
                                   <small
                                     id="ContactFooter-error"
@@ -306,6 +304,57 @@
                         </div>
                     </div>
                     </div>
+                    <script>
+                      document.addEventListener('DOMContentLoaded', () => {
+                        const newsletterForms = document.querySelectorAll('.footer-newsletter__form');
+
+                        if (!newsletterForms.length) return;
+
+                        newsletterForms.forEach((form) => {
+                          const input = form.querySelector('.footer-newsletter__input');
+                          const error = form.querySelector('.footer-newsletter__error--client');
+
+                          if (!input || !error) return;
+
+                          function validateEmail() {
+                            const value = input.value.trim();
+
+                            if (value === '') {
+                              input.classList.remove('footer-newsletter__input--error');
+                              error.hidden = true;
+                              return false;
+                            }
+
+                            const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
+                            if (isValid) {
+                              input.classList.remove('footer-newsletter__input--error');
+                              error.hidden = true;
+                            } else {
+                              input.classList.add('footer-newsletter__input--error');
+                              error.hidden = false;
+                            }
+
+                            return isValid;
+                          }
+
+                          form.addEventListener('submit', (event) => {
+                            if (!validateEmail()) {
+                              event.preventDefault();
+                              input.focus();
+                            }
+                          });
+
+                          input.addEventListener('input', () => {
+                            validateEmail();
+                          });
+
+                          input.addEventListener('blur', () => {
+                            validateEmail();
+                          });
+                        });
+                      });
+                    </script>
                   {%- when 'link_list' -%}
                     <div class="mobile-hide">
                       {%- if block.settings.menu != blank -%}

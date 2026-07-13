@@ -143,6 +143,106 @@
   </div>
 </div>
 
+<script>
+  if (!window.YT) {
+    const script = document.createElement('script');
+    script.src = 'https://www.youtube.com/iframe_api';
+    document.head.appendChild(script);
+  }
+
+  window.onYouTubeIframeAPIReady = function () {
+    initYoutubePlayers();
+  };
+
+  function initYoutubePlayers() {
+
+  console.log('function initiating---');  
+
+  document.querySelectorAll('.video-section').forEach((section) => {
+    observeIframe(section);
+  });
+
+  function observeIframe(section) {
+
+    const media = section.querySelector('deferred-media');
+
+    if (!media) return;
+
+    const observer = new MutationObserver(() => {
+
+      const iframe = media.querySelector('iframe');
+
+      if (!iframe || iframe.dataset.playerReady) return;
+
+      iframe.dataset.playerReady = true;
+
+      createPlayer(iframe, section);
+
+    });
+
+    observer.observe(media, {
+      childList: true,
+      subtree: true
+    });
+
+  }
+
+  function createPlayer(iframe, section) {
+
+    console.log('player creation--');
+    const customButton =
+      section.querySelector('.video-button');
+
+    new YT.Player(iframe, {
+
+      events: {
+
+        onStateChange(event) {
+          console.log('state changing----');
+          switch (event.data) {
+
+            case YT.PlayerState.PLAYING:
+
+              if (customButton) {
+                customButton.style.display = 'none';
+              }
+
+              break;
+
+            case YT.PlayerState.PAUSED:
+
+              if (customButton) {
+                customButton.style.display = 'flex';
+              }
+
+              break;
+
+            case YT.PlayerState.ENDED:
+
+              if (customButton) {
+                customButton.style.display = 'flex';
+              }
+
+              break;
+
+          }
+
+        }
+
+      }
+
+    });
+
+  }
+
+  let button = document.querySelector('.video-button');
+  button.addEventListener('click', () => {
+
+    button.style.display = 'none';
+
+  });
+}
+</script>  
 {% schema %}
 {
   "name": "t:sections.video.name",

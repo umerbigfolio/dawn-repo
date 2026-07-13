@@ -560,6 +560,25 @@
   padding-right: 24px;
 }
 
+.footer-newsletter__input--error{
+    border:1px solid #FF5353;
+}
+
+.footer-newsletter__error{
+    display:block;
+    margin-top:8px;
+    color:#FF5353;
+    font-family:"General Sans Variable",sans-serif;
+    font-weight:400;
+    font-size:14px;
+    line-height:100%;
+    letter-spacing:0;
+}
+
+.footer-newsletter__error[hidden]{
+    display:none;
+}
+
 @media(min-width: 1085px) {
   .footer__blocks-wrapper .footer-block.grid__item:has(.footer-newsletter) {
     margin-left: 70px;
